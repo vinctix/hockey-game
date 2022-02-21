@@ -1,0 +1,6 @@
+<h1 class="mx-auto">Canadiens de Montréal</h1>
+
+<app-team-selector (teamSelected)="team = $event"></app-team-selector>
+
+<app-team *ngIf="team" [team]="team"></app-team>
+

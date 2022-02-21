@@ -1,0 +1,17 @@
+<form [formGroup]="form">
+  <mat-form-field appearance="fill">
+    <mat-label>Equipe de quelle année ?</mat-label>
+    <input type="number" matInput  placeholder="Ex. 2021 ou 2022" formControlName="year" (keyup.enter)="search()">
+    <mat-error *ngIf="(fcYear.dirty || fcYear.touched) && fcYear.invalid">
+      Merci de saisir une année.
+    </mat-error>
+  </mat-form-field>
+</form>
+
+<ng-container *ngIf="isTeamNotFound">
+  <iframe src="https://giphy.com/embed/BEob5qwFkSJ7G" width="400" height="300" frameBorder="0" class="giphy-embed mx-auto" allowFullScreen></iframe>
+  <p><a href="https://giphy.com/gifs/spongebob-squarepants-sad-crying-BEob5qwFkSJ7G"></a></p>
+  <div class="mx-auto text-2xl text-red-600">Equipe inconnue</div>
+
+</ng-container>
+

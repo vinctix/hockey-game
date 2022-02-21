@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "1f00536c-16ee-4e11-b2f3-c7d7d9ad166b",
+		"name": "Hokey Game",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Team - Get one by year",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7245/api/teams/2022",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7245",
+					"path": [
+						"api",
+						"teams",
+						"2022"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Player - Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"number\": 7,\n    \"firstName\": \"Vincent\",\n    \"lastName\": \"Tixier\",\n    \"position\": \"center\",\n    \"isCaptain\": false,\n    \"teamId\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7245/api/players",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7245",
+					"path": [
+						"api",
+						"players"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Player - Set Captain",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7245/api/players/8/captain",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7245",
+					"path": [
+						"api",
+						"players",
+						"8",
+						"captain"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
